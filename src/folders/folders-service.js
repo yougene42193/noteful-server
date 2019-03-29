@@ -12,7 +12,7 @@ const FoldersService = {
         return rows[0];
       })
   },
-  getById(knex, id) {
+  getFolderById(knex, id) {
     return knex.from('noteful_folders').select('*').where('id', id).first();
   },
   deleteFolder(knex, id) {
